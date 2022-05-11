@@ -16,6 +16,8 @@ public class FirstTest {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("browser");
         options.addArguments("disable-gpu");
+        options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+        options.addArguments("--no-sandbox"); // Bypass OS security model
         driver = new ChromeDriver(options);
         driver.get("https://www.impactguru.com/");
         System.out.println("Title of the page is: " + driver.getTitle());
