@@ -17,6 +17,7 @@ public class FirstTest {
         options.addArguments("browser");
         options.addArguments("disable-gpu");
         options.addArguments("--no-sandbox", "--disable-dev-shm-usage");
+        options.setExperimentalOption("useAutomationExtension", false);
         driver = new ChromeDriver(options);
         driver.get("https://www.impactguru.com/");
         System.out.println("Title of the page is: " + driver.getTitle());
