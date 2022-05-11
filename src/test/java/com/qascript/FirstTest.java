@@ -16,9 +16,11 @@ public class FirstTest {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("browser");
         options.addArguments("disable-gpu");
-        chromeOptions.addArguments("--no-sandbox", "--disable-dev-shm-usage");
+        options.addArguments("--no-sandbox", "--disable-dev-shm-usage");
         driver = new ChromeDriver(options);
         driver.get("https://www.impactguru.com/");
+        System.out.println("Title of the page is: " + driver.getTitle());
+        
        
     }
 
