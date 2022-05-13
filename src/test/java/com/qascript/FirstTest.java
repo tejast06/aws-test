@@ -15,10 +15,10 @@ public class FirstTest {
         
         WebDriver driver;
        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-        options.addArguments("--no-sandbox", "--disable-dev-shm-usage");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("browser");
         options.addArguments("disable-gpu");
+        options.addArguments("--no-sandbox", "--disable-dev-shm-usage");
         options.addArguments("--privileged");
         driver = new ChromeDriver(options);
         driver.get("https://www.impactguru.com");
