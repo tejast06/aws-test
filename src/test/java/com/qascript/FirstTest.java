@@ -12,17 +12,14 @@ public class FirstTest {
     @Test
     public void OpenBrowser()  {
        
-        
-        WebDriver driver;
+    WebDriver driver;
        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         ChromeOptions options = new ChromeOptions();
-             options = webdriver.ChromeOptions()
-options.add_argument('headless')
-options.add_argument('--disable-infobars')
-options.add_argument('--disable-dev-shm-usage')
-options.add_argument('--no-sandbox')
-options.add_argument('--remote-debugging-port=9222')
-driver = webdriver.Chrome(options=options)
+        options.addArguments("browser");
+        options.addArguments("disable-gpu");
+        options.addArguments("--no-sandbox", "--disable-dev-shm-usage");
+        options.addArguments("--privileged");
+        driver = new ChromeDriver(options);
         driver.get("https://www.impactguru.com");
         System.out.println("Title of the page is: " + driver.getTitle());
    
