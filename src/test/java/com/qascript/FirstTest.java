@@ -18,8 +18,8 @@ public class FirstTest {
 	   // options.addArguments("--no-sandbox");
 	options.addArguments("window-size=1400,800");    
         options.addArguments("browser");
-        options.addArguments("disable-gpu");
-	options.addArguments("--disable-features=VizDisplayCompositor");
+       // options.addArguments("disable-gpu");
+	//options.addArguments("--disable-features=VizDisplayCompositor");
         driver = new ChromeDriver(options);
 	driver.manage().window().maximize();
         driver.get("https://www.impactguru.com");
