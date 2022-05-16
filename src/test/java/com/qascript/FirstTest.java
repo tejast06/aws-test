@@ -13,18 +13,21 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class FirstTest {
+	 @Test
+         public void OpenBrowser() {
+         WebDriver driver;
 
 
-    @Test
-	 ChromeOptions options = new ChromeOptions();
+        ChromeOptions options = new ChromeOptions();
         options.setHeadless(true);
-        System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
-        WebDriver driver = new ChromeDriver(options);
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+        driver = new ChromeDriver(options);
         driver.get("https://www.impactguru.com");
         System.out.println(driver.getTitle());
-	
-	    
     }
+
+
+   
 
 
 }
