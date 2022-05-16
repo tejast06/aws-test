@@ -16,8 +16,9 @@ public class FirstTest {
         ChromeOptions options = new ChromeOptions();
 	options.addArguments("--no-sandbox");
 	options.addArguments("window-size=1400,800");    
-        options.addArguments("headless");
+        options.addArguments("browser");
         options.addArguments("disable-gpu");
+	options.addArguments("--disable-features=VizDisplayCompositor");
         driver = new ChromeDriver(options);
 	driver.manage().window().maximize();
         driver.get("https://www.impactguru.com");
