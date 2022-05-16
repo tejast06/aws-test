@@ -14,7 +14,8 @@ public class FirstTest {
    WebDriver driver;  
 	    System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
         ChromeOptions options = new ChromeOptions();
-	options.addArguments("--no-sandbox");
+	    options.addArguments("--privileged");
+	   // options.addArguments("--no-sandbox");
 	options.addArguments("window-size=1400,800");    
         options.addArguments("browser");
         options.addArguments("disable-gpu");
