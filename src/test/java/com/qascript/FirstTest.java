@@ -16,12 +16,12 @@ public class FirstTest {
 
 
     @Test
-	System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
-	ChromeOptions options = new ChromeOptions();
-	 WebDriver driver = new ChromeDriver(options);
-	 options.setHeadless(true);
-	 driver.get("https://www.impactguru.com");
-	 driver.quit();
+	 ChromeOptions options = new ChromeOptions();
+        options.setHeadless(true);
+        System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
+        WebDriver driver = new ChromeDriver(options);
+        driver.get("https://www.impactguru.com");
+        System.out.println(driver.getTitle());
 	
 	    
     }
