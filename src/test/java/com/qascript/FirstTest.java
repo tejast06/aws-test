@@ -15,11 +15,11 @@ public class FirstTest {
 	    System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
         ChromeOptions options = new ChromeOptions();
 	    options.addArguments("--privileged");
-	   // options.addArguments("--no-sandbox");
+	   options.addArguments("--no-sandbox");
 	options.addArguments("window-size=1400,800");    
         options.addArguments("browser");
-        options.addArguments("disable-gpu");
-	options.addArguments("--disable-features=VizDisplayCompositor");
+       options.addArguments("disable-gpu");
+	//options.addArguments("--disable-features=VizDisplayCompositor");
         driver = new ChromeDriver(options);
 	driver.manage().window().maximize();
         driver.get("https://www.impactguru.com");
