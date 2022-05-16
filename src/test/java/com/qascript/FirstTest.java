@@ -17,9 +17,9 @@ public class FirstTest {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("headless");
         options.addArguments("browser");
-       options.addArguments("disable-gpu");
-      options.addArguments("--no-sandbox", "--disable-dev-shm-usage");
-      options.addArguments("--privileged");
+       //options.addArguments("disable-gpu");
+     // options.addArguments("--no-sandbox", "--disable-dev-shm-usage");
+      //options.addArguments("--privileged");
         driver = new ChromeDriver(options);
        driver.get("https://www.impactguru.com");
        System.out.println("Title of the page is: " + driver.getTitle());
