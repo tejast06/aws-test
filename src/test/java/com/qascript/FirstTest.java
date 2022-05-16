@@ -13,12 +13,13 @@ public class FirstTest {
     public void OpenBrowser()  {
        
     WebDriver driver;
+       System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("browser");
-        options.addArguments("disable-gpu");
-       options.addArguments("--no-sandbox", "--disable-dev-shm-usage");
-        options.addArguments("--privileged");
+       // options.addArguments("disable-gpu");
+      // options.addArguments("--no-sandbox", "--disable-dev-shm-usage");
+      //  options.addArguments("--privileged");
         driver = new ChromeDriver(options);
        driver.get("https://www.impactguru.com");
        System.out.println("Title of the page is: " + driver.getTitle());
