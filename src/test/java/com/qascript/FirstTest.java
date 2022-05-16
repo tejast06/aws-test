@@ -20,6 +20,7 @@ public class FirstTest {
 
         ChromeOptions options = new ChromeOptions();
         //options.setHeadless(false);
+	options.addArguments("headless");
         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         driver = new ChromeDriver(options);
         driver.get("https://www.impactguru.com");
