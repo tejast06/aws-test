@@ -11,12 +11,17 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class FirstTest {
 	 @Test
          public void OpenBrowser() {
-       System.setProperty("webdriver.gecko.driver", " /usr/bin/geckodriver");
+       WebDriver driver;
 
-        WebDriver driver = new FirefoxDriver();
-        driver.get("https://www.impactguru.com/");
-        System.out.println(driver.getTitle());
-        driver.quit();
+        System.setProperty("webdriver.gecko.driver", "C:\\Users\\impac\\Downloads\\geckodriver-v0.31.0-win64\\geckodriver.exe");
+
+        DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+
+        capabilities.setCapability("marionette", true);
+
+        driver = new FirefoxDriver(capabilities);
+
+        driver.get("https://google.com");
     }
 
 
