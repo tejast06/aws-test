@@ -13,13 +13,7 @@ public class FirstTest {
          public void OpenBrowser() {
         System.setProperty("webdriver.chrome.driver", " /usr/bin/chromedriver/chromedriver.exe");
         WebDriver driver;
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--no-sandbox");
-        options.addArguments("window-size=1400,800");
-        options.addArguments("browser");
-        options.addArguments("disable-gpu");
-        options.addArguments("--disable-dev-shm-usage");
-        driver = new ChromeDriver(options);
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.impactguru.com");
         System.out.println("Title of the page is: " + driver.getTitle());
