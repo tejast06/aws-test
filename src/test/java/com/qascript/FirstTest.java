@@ -11,7 +11,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class FirstTest {
 	 @Test
          public void OpenBrowser() {
-       System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+        System.setProperty("webdriver.chrome.driver", " /usr/bin/chromedriver/chromedriver.exe");
         WebDriver driver;
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox");
