@@ -14,7 +14,7 @@ public class FirstTest {
         WebDriver driver;
         System.setProperty("webdriver.chrome.driver","/usr/bin/google-chrome");
         ChromeOptions options = new ChromeOptions();
-         options.addArguments("headless");
+         options.addArguments("browser");
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.get("https://www.impactguru.com");
