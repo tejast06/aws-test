@@ -14,6 +14,7 @@ public class FirstTest {
         WebDriver driver;
         System.setProperty("webdriver.chrome.driver","/usr/bin/google-chrome");
         driver = new ChromeDriver();
+         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get("https://www.impactguru.com");
         System.out.println("Title of the page is: " + driver.getTitle());
