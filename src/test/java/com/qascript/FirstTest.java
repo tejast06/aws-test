@@ -5,10 +5,9 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 
 
-public class FirstTest throws InterruptedException {
+public class FirstTest  {
 	
 	 @Test
          public void OpenBrowser() {
@@ -22,12 +21,6 @@ public class FirstTest throws InterruptedException {
         Assert.assertTrue("Page title is not correct",driver.getTitle().equals("Crowdfunding in India: Best Fundraising Platform Online | ImpactGuru"));
    
     }
-	
-
-
-   
-
-
 }
 
 
