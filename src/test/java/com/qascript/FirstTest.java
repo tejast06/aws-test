@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 
-public class FirstTest {
+public class FirstTest throws InterruptedException {
 	 @Test
          public void OpenBrowser() {
          Thread.sleep(15000);
