@@ -11,11 +11,10 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class FirstTest throws InterruptedException {
 	
 	 @Test
-         public void OpenBrowser() throws InterruptedException {
-         Thread.sleep(15000);
+         public void OpenBrowser() {
+         
          WebDriver driver;
-        Thread.sleep(15000);
-        System.setProperty("webdriver.chrome.driver","/usr/bin/google-chrome");
+         System.setProperty("webdriver.chrome.driver","/usr/bin/google-chrome");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.impactguru.com");
