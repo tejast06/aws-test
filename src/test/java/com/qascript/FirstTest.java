@@ -9,11 +9,12 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 
 public class FirstTest throws InterruptedException {
+	
 	 @Test
-         public void OpenBrowser() {
+         public void OpenBrowser() throws InterruptedException {
          Thread.sleep(15000);
-        WebDriver driver;
-	Thread.sleep(15000);
+         WebDriver driver;
+        Thread.sleep(15000);
         System.setProperty("webdriver.chrome.driver","/usr/bin/google-chrome");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -22,6 +23,7 @@ public class FirstTest throws InterruptedException {
         Assert.assertTrue("Page title is not correct",driver.getTitle().equals("Crowdfunding in India: Best Fundraising Platform Online | ImpactGuru"));
    
     }
+	
 
 
    
