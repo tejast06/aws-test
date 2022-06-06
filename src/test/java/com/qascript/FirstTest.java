@@ -11,7 +11,9 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class FirstTest {
 	 @Test
          public void OpenBrowser() {
+         Thread.sleep(15000);
         WebDriver driver;
+	Thread.sleep(15000);
         System.setProperty("webdriver.chrome.driver","/usr/bin/google-chrome");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
