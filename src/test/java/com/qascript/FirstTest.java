@@ -11,9 +11,10 @@ public class FirstTest  {
 	
 	 @Test
          public void OpenBrowser() {
-         
+          System.out.println("driver initialize");
         WebDriver driver;
         System.setProperty("webdriver.chrome.driver","/usr/bin/google-chrome");
+		 System.out.println("driver closed");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.impactguru.com");
