@@ -21,7 +21,7 @@ public class FirstTest  {
 
          FirefoxOptions firefoxOptions = new FirefoxOptions();
 
-         //firefoxOptions.setBinary(firefoxBinary);
+         firefoxOptions.setBinary(firefoxBinary);
 
          FirefoxDriver driver = new FirefoxDriver(firefoxOptions);
 
