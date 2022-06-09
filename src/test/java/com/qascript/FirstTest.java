@@ -10,11 +10,22 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class FirstTest  {
 	
 	 @Test
-         System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
-         FirefoxOptions options = new FirefoxOptions();
-         options.setBinary("/usr/bin/firefox");
-         WebDriver driver =  new FirefoxDriver(options);
-         driver.get("https://www.impactguru.com");
+       FirefoxBinary firefoxBinary = new FirefoxBinary();
+
+firefoxBinary.addCommandLineOptions("--headless");
+
+firefoxBinary.addCommandLineOptions("--no-sandbox");
+
+System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
+
+FirefoxOptions firefoxOptions = new FirefoxOptions();
+
+firefoxOptions.setBinary(firefoxBinary);
+
+WebDriver driver = new FirefoxDriver(firefoxOptions);
+
+driver.get("https://www.google.com/");
+System.out.println(driver.getTitle());
    
    
     }
