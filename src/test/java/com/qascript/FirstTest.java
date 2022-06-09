@@ -21,11 +21,11 @@ public class FirstTest  {
 
          FirefoxOptions firefoxOptions = new FirefoxOptions();
 
-         firefoxOptions.setBinary(firefoxBinary);
+         //firefoxOptions.setBinary(firefoxBinary);
 
          FirefoxDriver driver = new FirefoxDriver(firefoxOptions);
 
-         driver.get("https://google.com");
+         driver.get("https://www.impactguru.com");
    
    
     }
