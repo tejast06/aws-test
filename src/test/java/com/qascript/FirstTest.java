@@ -11,16 +11,21 @@ public class FirstTest  {
 	
 	 @Test
          public void OpenBrowser() {
-          System.out.println("driver initialize");
-        WebDriver driver;
-        System.setProperty("webdriver.chrome.driver","/usr/bin/google-chrome");
-		 System.out.println("driver closed");
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://www.impactguru.com");
-        System.out.println("Title of the page is: " + driver.getTitle());
-        Assert.assertTrue("Page title is not correct",driver.getTitle().equals("Crowdfunding in India: Best Fundraising Platform Online | ImpactGuru"));
-   
+         FirefoxBinary firefoxBinary = new FirefoxBinary();
+
+         firefoxBinary.addCommandLineOptions("--headless");
+
+         firefoxBinary.addCommandLineOptions("--no-sandbox");
+
+         System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
+
+         FirefoxOptions firefoxOptions = new FirefoxOptions();
+
+         firefoxOptions.setBinary(firefoxBinary);
+
+         FirefoxDriver driver = new FirefoxDriver(firefoxOptions);
+
+         driver.get("https://google.com");
    
    
     }
