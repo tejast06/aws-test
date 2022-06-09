@@ -9,25 +9,25 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class FirstTest  {
 	
-	 @Test
-       FirefoxBinary firefoxBinary = new FirefoxBinary();
+	@Test
+         public void OpenBrowser()  {
 
-firefoxBinary.addCommandLineOptions("--headless");
+         FirefoxBinary firefoxBinary = new FirefoxBinary();
 
-firefoxBinary.addCommandLineOptions("--no-sandbox");
+         firefoxBinary.addCommandLineOptions("--headless");
 
-System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
+         firefoxBinary.addCommandLineOptions("--no-sandbox");
 
-FirefoxOptions firefoxOptions = new FirefoxOptions();
+         System.setProperty("webdriver.gecko.driver", "C:\\Users\\impac\\Desktop\\datadriven\\geckodriver.exe");
 
-firefoxOptions.setBinary(firefoxBinary);
+         FirefoxOptions firefoxOptions = new FirefoxOptions();
 
-WebDriver driver = new FirefoxDriver(firefoxOptions);
+         firefoxOptions.setBinary(firefoxBinary);
 
-driver.get("https://www.google.com/");
-System.out.println(driver.getTitle());
-   
-   
+         WebDriver driver = new FirefoxDriver(firefoxOptions);
+
+         driver.get("https://www.google.com/");
+         System.out.println(driver.getTitle());
     }
 }
 
