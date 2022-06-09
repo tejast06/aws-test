@@ -18,7 +18,7 @@ public class FirstTest  {
 
          firefoxBinary.addCommandLineOptions("--no-sandbox");
 
-         System.setProperty("webdriver.gecko.driver", "C:\\Users\\impac\\Desktop\\datadriven\\geckodriver.exe");
+         System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
 
          FirefoxOptions firefoxOptions = new FirefoxOptions();
 
