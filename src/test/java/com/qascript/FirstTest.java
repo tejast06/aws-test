@@ -17,7 +17,7 @@ public class FirstTest  {
 
          FirefoxBinary firefoxBinary = new FirefoxBinary();
 
-       //  firefoxBinary.addCommandLineOptions("--headless");
+         firefoxBinary.addCommandLineOptions("--headless");
 
          firefoxBinary.addCommandLineOptions("--no-sandbox");
 
