@@ -15,17 +15,17 @@ public class FirstTest  {
 	@Test
          public void OpenBrowser()  {
 
-         FirefoxBinary firefoxBinary = new FirefoxBinary();
+         //FirefoxBinary firefoxBinary = new FirefoxBinary();
 
-        firefoxBinary.addCommandLineOptions("--headless");
+        //firefoxBinary.addCommandLineOptions("--headless");
 
-        firefoxBinary.addCommandLineOptions("--no-sandbox");
+        //firefoxBinary.addCommandLineOptions("--no-sandbox");
 
          System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
 
          FirefoxOptions firefoxOptions = new FirefoxOptions();
 
-         firefoxOptions.setBinary(firefoxBinary);
+        // firefoxOptions.setBinary(firefoxBinary);
 
          WebDriver driver = new FirefoxDriver(firefoxOptions);
 
