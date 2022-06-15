@@ -19,7 +19,7 @@ public class FirstTest  {
 
         firefoxBinary.addCommandLineOptions("--headless");
 
-        // firefoxBinary.addCommandLineOptions("--no-sandbox");
+        firefoxBinary.addCommandLineOptions("--no-sandbox");
 
          System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
 
