@@ -15,22 +15,14 @@ public class FirstTest  {
 	@Test
          public void OpenBrowser()  {
 
-         FirefoxBinary firefoxBinary = new FirefoxBinary();
-
-        firefoxBinary.addCommandLineOptions("headless");
-
-        firefoxBinary.addCommandLineOptions("--no-sandbox");
-
-         System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
-
-         FirefoxOptions firefoxOptions = new FirefoxOptions();
-
-        firefoxOptions.setBinary(firefoxBinary);
-
-         WebDriver driver = new FirefoxDriver(firefoxOptions);
-
-         driver.get("https://www.impactguru.com/");
-         System.out.println(driver.getTitle());
+        System.setProperty("webdriver.chrome.driver", " /usr/bin/chromedriver/chromedriver.exe");
+        WebDriver driver;
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.get("https://www.impactguru.com");
+        System.out.println("Title of the page is: " + driver.getTitle());
+        Assert.assertTrue("Page title is not correct",driver.getTitle().equals("Crowdfunding in India: Best Fundraising Platform Online | ImpactGuru"));
+        driver.quit();
     }
 }
 
