@@ -16,8 +16,10 @@ public class FirstTest  {
          public void OpenBrowser()  {
 
         System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
+        ChromeOptions options = new ChromeOptions();
+        options.setHeadless(true);
         WebDriver driver;
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.get("https://www.impactguru.com");
         System.out.println("Title of the page is: " + driver.getTitle());
